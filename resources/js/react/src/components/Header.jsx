@@ -14,7 +14,7 @@ const Header = () => {
     <div className='flex flex-row justify-between p-10'>
       <ul className='flex flex-row justify-around w-full'>
         <li>
-          <a href='/home' className="text-[20px] font-extrabold hover:text-gray-400">CookBook</a>
+          <a href='/home' className="text-[20px] font-extrabold hover:text-gray-400">Polis-online</a>
         </li>
         {
           user ?

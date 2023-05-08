@@ -9,7 +9,7 @@
 
 ## О проекте
 
-Имплементация Авторизация используя технологии Laravel, ReactJS, Redux, Redux Toolkit, Webpack, Babel, TailwindCSS.
+Имплементация Авторизации используя технологии Laravel, ReactJS, Redux, Redux Toolkit, Webpack, Babel, TailwindCSS.
 
 К сожалению в данный момент не нахожу времени дать инструкцию развертки и общее описание выполненной работы. Очень надеюсь что этот вопрос будет закрыт к 09.05.2023
 
@@ -18,3 +18,18 @@
 Дизайн взят из Figma Community: https://www.figma.com/file/ujofqDhMoW81HxexKFEbAp/Authentication-page-(Community)?type=design&node-id=0-1&t=cYx1iksKseXFdmZl-0
 
 Использовал сторонние библиотеки: Laravel/TymonJWT - https://github.com/tymondesigns/jwt-auth, React Spinners - https://www.npmjs.com/package/react-spinners.
+
+Общее время проекта заняло примерно 8 часов рабочего времени.
+
+Основные замечания:
+### Laravel:
+ - Добавлен trait HashesPassword в папку App/Traits, который используется в модели App/User.
+ - Установлена библиотека Laravel/TymonJWT - https://github.com/tymondesigns/jwt-auth для реализации авторизации через JWT.
+ - Добавлены Request классы BaseRequest, RegisterRequest. RegisterRequest используется для того чтобы задать rules и не описывать валидацию контроллере. BaseRequest использовал для того чтобы переопределить метод failedValidation, который вызывается в случае провала валидации, чтобы он всегда возвращал JSON, вместо дефолтной 404 страницы Laravel.
+ - Я уже реализовал авторизацию на Laravel с дополнительными требованиями в другом тестовом проекте, если вам будет интересно, можете ознакомится - https://github.com/arstoktarov/laravel-test-project.
+### React:
+ - Использован сборщик Webpack с Babel.
+ - Верстку хотел ускорить и использовал TailwindCSS.
+ - Для стейтов использовал Redux, мой опыт оказался чуть устаревшим, я писал actions, reducers, все отдельно. Поэтому в проекте изучил и использовал современный подход использования Redux Toolkit.
+ - Предполагал что использую Cookies для хранения access_token-a, но решил хранить его в localStorage.
+ - Использовал библиотеку react-hook-form для реализации формы.

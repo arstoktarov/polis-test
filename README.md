@@ -23,7 +23,7 @@
 
 Основные замечания:
 ### Laravel:
- - Добавлен trait HashesPassword в папку App/Traits, который используется в модели App/User.
+ - Добавлен trait HashesPassword в папку App/Traits, который используется в модели App/User. В нем находится всего одна функция-мутатор, который хеширует атрибут password в User модельке.
  - Установлена библиотека Laravel/TymonJWT - https://github.com/tymondesigns/jwt-auth для реализации авторизации через JWT.
  - Добавлены Request классы BaseRequest, RegisterRequest. RegisterRequest используется для того чтобы задать rules и не описывать валидацию контроллере. BaseRequest использовал для того чтобы переопределить метод failedValidation, который вызывается в случае провала валидации, чтобы он всегда возвращал JSON, вместо дефолтной 404 страницы Laravel.
  - Я уже реализовал авторизацию на Laravel с дополнительными требованиями в другом тестовом проекте, если вам будет интересно, можете ознакомится - https://github.com/arstoktarov/laravel-test-project.

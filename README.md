@@ -33,3 +33,48 @@
  - Для стейтов использовал Redux, мой опыт оказался чуть устаревшим, я писал actions, reducers, все отдельно. Поэтому в проекте изучил и использовал современный подход использования Redux Toolkit.
  - Предполагал что использую Cookies для хранения access_token-a, но решил хранить его в localStorage.
  - Использовал библиотеку react-hook-form для реализации формы.
+
+### Инструкция по развертыванию:
+
+Чтобы front-end отправлял запросы в нужный url, нужно настроить константу backendURL в файле /src/actions/authActions.js
+
+Проект запускал на Xampp Apache но подстроил backendURL под php artisan serve, поэтому при такой развертке он должен работать.
+
+```
+> git clone https://github.com/arstoktarov/laravel-test-project.git
+```
+
+## Laravel: 
+```
+> cd /path_to_project
+
+> composer install
+
+> copy .env.example .env
+
+> Настроить APP_URL, DB_CONNECTION, DB_DATABASE, DB_PASSWORD в файле .env
+
+> php artisan key:generate
+
+> php artisan jwt:secret
+
+> php artisan migrate
+
+> php artisan db:seed
+
+// Для запуска веб-сервера:
+> php artisan serve
+
+```
+
+### React
+```
+> npm install
+
+// Для запуска webpack-dev-сервера
+> npm run dev
+// or
+> npm start
+
+// Для получения билда проекта
+> npm run build

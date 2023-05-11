@@ -17,7 +17,7 @@ const App = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  
+
   useEffect(() => {
     const access_token = localStorage.getItem('access_token');
     console.log('access_token', access_token);
@@ -32,6 +32,9 @@ const App = () => {
 
   return (
     <Routes>
+      <Route exact path="/" element={
+          <HomePage />
+      } />
       <Route exact path="/login" element={<LoginPage />} />
       <Route exact path="/register" element={<RegisterPage />} />
       <Route exact path="/home" element={<HomePage />} />

@@ -2,13 +2,13 @@ import axios from 'axios'
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { createAction } from '@reduxjs/toolkit';
 
-const backendURL = 'http://localhost/polis-test/public/api/v1';
+const backendURL = 'http://localhost:8000/api/v1';
 
 export const userRegister = createAsyncThunk(
     'auth/register',
     async ({ name, email, password }, { rejectWithValue }) => {
       try {
-        
+
         console.log({ name, email, password });
 
         const config = {

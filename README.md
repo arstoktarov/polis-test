@@ -60,8 +60,6 @@
 
 > php artisan migrate
 
-> php artisan db:seed
-
 // Для запуска веб-сервера:
 > php artisan serve
 

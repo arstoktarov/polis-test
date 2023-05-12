@@ -11,8 +11,6 @@
 
 Имплементация Авторизации используя технологии Laravel, ReactJS, Redux, Redux Toolkit, Webpack, Babel, TailwindCSS.
 
-К сожалению в данный момент не нахожу времени дать инструкцию развертки и общее описание выполненной работы. Очень надеюсь что этот вопрос будет закрыт к 09.05.2023
-
 ## Реализация ReactJS лежит в папке resources/js/react.
 
 Дизайн взят из Figma Community: https://www.figma.com/file/ujofqDhMoW81HxexKFEbAp/Authentication-page-(Community)?type=design&node-id=0-1&t=cYx1iksKseXFdmZl-0
